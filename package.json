@@ -1,8 +1,8 @@
 {
-  "_from": "nodecg-screenshot-tester@8.0.3",
-  "_id": "nodecg-screenshot-tester@8.0.3",
+  "_from": "nodecg-screenshot-tester@8.0.4",
+  "_id": "nodecg-screenshot-tester@8.0.4",
   "_inBundle": false,
-  "_integrity": "sha512-a/HuKlchlPAz7EpE2w0wJcVbBSwTmsBFTDfzD4JQq8R5LsgW2tFJluTCWsx0lbpMbZfdmMHm25Z2jOr1CApAhg==",
+  "_integrity": "sha512-lmmV8EeNJR3l+ajdVmrtPBaI5UgzDQhhO3uYEkWJFqqMD+ty9zriM9ROk4g4bqStcUszyNcDG+BHAtXTj5qj/w==",
   "_location": "/nodecg-screenshot-tester",
   "_phantomChildren": {
     "async-limiter": "1.0.1",
@@ -16,20 +16,20 @@
   "_requested": {
     "type": "version",
     "registry": true,
-    "raw": "nodecg-screenshot-tester@8.0.3",
+    "raw": "nodecg-screenshot-tester@8.0.4",
     "name": "nodecg-screenshot-tester",
     "escapedName": "nodecg-screenshot-tester",
-    "rawSpec": "8.0.3",
+    "rawSpec": "8.0.4",
     "saveSpec": null,
-    "fetchSpec": "8.0.3"
+    "fetchSpec": "8.0.4"
   },
   "_requiredBy": [
     "#USER",
     "/"
   ],
-  "_resolved": "https://registry.npmjs.org/nodecg-screenshot-tester/-/nodecg-screenshot-tester-8.0.3.tgz",
-  "_shasum": "9c6426c73f2366340b395201b7adef2f7c015759",
-  "_spec": "nodecg-screenshot-tester@8.0.3",
+  "_resolved": "https://registry.npmjs.org/nodecg-screenshot-tester/-/nodecg-screenshot-tester-8.0.4.tgz",
+  "_shasum": "173c5d453bfd12f9ede287d637caeb778947ecc0",
+  "_spec": "nodecg-screenshot-tester@8.0.4",
   "_where": "J:\\Node\\NPM",
   "author": {
     "name": "Alex Van Camp",
@@ -109,9 +109,6 @@
   },
   "license": "MIT",
   "name": "nodecg-screenshot-tester",
-  "peerDependencies": {
-    "ava": "^1.2.0"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/nodecg/nodecg-screenshot-tester.git"
@@ -127,5 +124,5 @@
     "test": "npm run static"
   },
   "types": "dist/index.d.ts",
-  "version": "8.0.3"
+  "version": "8.0.4"
 }

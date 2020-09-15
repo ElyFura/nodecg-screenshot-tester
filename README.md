@@ -46,13 +46,13 @@ To be completely blunt, the API for this is quirky and probably could be improve
     {
     	"scripts": {
     		"test-screenshots": "nodecg-screenshot-tester test/screenshots.js",
-    		"update-screenshots": "test-screenshots -- --update",
-    		"debug-screenshots": "test-screenshots -- --debug"
+    		"update-screenshots": "npm run test-screenshots -- --update",
+    		"debug-screenshots": "npm run test-screenshots -- --debug"
     	}
     }
     ```
 
-3. Create a `screenshot-consts.js` file, which is where your test cases will be defined:
+3. Create a `screenshots.js` file, which is where your test cases will be defined:
 
     ```js
     // nodecg/bundles/your-bundle/test/screenshots.js
