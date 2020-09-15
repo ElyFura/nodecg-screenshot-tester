@@ -1,0 +1,85 @@
+{
+  "_from": "nodecg-screenshot-tester@0.0.1",
+  "_id": "nodecg-screenshot-tester@0.0.1",
+  "_inBundle": false,
+  "_integrity": "sha512-5pKAlMZaasfjD5M6ZQb3iZ7vMxoujQAAWcj112IjGrYy8ScgXXDQUBYFmkNBH3chSQTHniul270n3JGib2p9wQ==",
+  "_location": "/nodecg-screenshot-tester",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "nodecg-screenshot-tester@0.0.1",
+    "name": "nodecg-screenshot-tester",
+    "escapedName": "nodecg-screenshot-tester",
+    "rawSpec": "0.0.1",
+    "saveSpec": null,
+    "fetchSpec": "0.0.1"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/nodecg-screenshot-tester/-/nodecg-screenshot-tester-0.0.1.tgz",
+  "_shasum": "860388da71024b3163bf05474cc3946c6ca07b8d",
+  "_spec": "nodecg-screenshot-tester@0.0.1",
+  "_where": "J:\\Node\\NPM",
+  "author": {
+    "name": "Alex Van Camp",
+    "email": "email@alexvan.camp"
+  },
+  "bin": {
+    "generate-fixture-screenshots": "dist/bin/generate-fixture-screenshots.js"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "express": "^4.16.3",
+    "mkdirp": "^0.5.1",
+    "mock-nodecg": "^1.5.2",
+    "ora": "^2.1.0",
+    "p-each-series": "^1.0.0",
+    "pixelmatch": "^4.0.2",
+    "pngjs": "^3.3.3",
+    "puppeteer": "~1.1.1",
+    "tmp": "0.0.33",
+    "tslib": "^1.9.1",
+    "yargs": "^11.0.0"
+  },
+  "deprecated": false,
+  "description": "Easily create visual regression tests for your NodeCG graphics.",
+  "devDependencies": {
+    "@types/cheerio": "^0.22.7",
+    "@types/express": "^4.11.1",
+    "@types/mkdirp": "^0.5.2",
+    "@types/node": "^10.1.0",
+    "@types/ora": "^1.3.4",
+    "@types/p-each-series": "^1.0.0",
+    "@types/pixelmatch": "^4.0.0",
+    "@types/pngjs": "^3.3.1",
+    "@types/puppeteer": "^1.3.2",
+    "@types/tmp": "0.0.33",
+    "@types/yargs": "^11.0.0",
+    "ava": "^1.0.0-beta.4",
+    "trash-cli": "^1.4.0",
+    "ts-node": "^6.0.3",
+    "tslint": "^5.10.0",
+    "tslint-xo": "^0.7.2",
+    "typescript": "^2.8.3"
+  },
+  "license": "MIT",
+  "main": "dist/index.js",
+  "name": "nodecg-screenshot-tester",
+  "peerDependencies": {
+    "ava": "^1.0.0-beta.4"
+  },
+  "scripts": {
+    "build": "trash dist && tsc -p tsconfig.json",
+    "postrelease": "npm publish && git push --follow-tags",
+    "prebuild": "npm run test",
+    "prerelease": "npm t",
+    "release": "standard-version",
+    "static": "tslint -c tslint.json 'src/**/*.ts'",
+    "test": "npm run static"
+  },
+  "version": "0.0.1"
+}
