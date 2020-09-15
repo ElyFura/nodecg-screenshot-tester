@@ -1,27 +1,27 @@
 {
-  "_from": "nodecg-screenshot-tester@0.0.1",
-  "_id": "nodecg-screenshot-tester@0.0.1",
+  "_from": "nodecg-screenshot-tester@0.1.0",
+  "_id": "nodecg-screenshot-tester@0.1.0",
   "_inBundle": false,
-  "_integrity": "sha512-5pKAlMZaasfjD5M6ZQb3iZ7vMxoujQAAWcj112IjGrYy8ScgXXDQUBYFmkNBH3chSQTHniul270n3JGib2p9wQ==",
+  "_integrity": "sha512-uqs/0bo1eWkq4MF26jJdvXXF9uVMQ4ZWNcI68LN2i1LO1lfLSxxP74fChWfbLe7IcVhuT3fRd/wZyTQ95s9JRg==",
   "_location": "/nodecg-screenshot-tester",
   "_phantomChildren": {},
   "_requested": {
     "type": "version",
     "registry": true,
-    "raw": "nodecg-screenshot-tester@0.0.1",
+    "raw": "nodecg-screenshot-tester@0.1.0",
     "name": "nodecg-screenshot-tester",
     "escapedName": "nodecg-screenshot-tester",
-    "rawSpec": "0.0.1",
+    "rawSpec": "0.1.0",
     "saveSpec": null,
-    "fetchSpec": "0.0.1"
+    "fetchSpec": "0.1.0"
   },
   "_requiredBy": [
     "#USER",
     "/"
   ],
-  "_resolved": "https://registry.npmjs.org/nodecg-screenshot-tester/-/nodecg-screenshot-tester-0.0.1.tgz",
-  "_shasum": "860388da71024b3163bf05474cc3946c6ca07b8d",
-  "_spec": "nodecg-screenshot-tester@0.0.1",
+  "_resolved": "https://registry.npmjs.org/nodecg-screenshot-tester/-/nodecg-screenshot-tester-0.1.0.tgz",
+  "_shasum": "b09cff9a4350a2bd0d928751b9227b5d855c2a92",
+  "_spec": "nodecg-screenshot-tester@0.1.0",
   "_where": "J:\\Node\\NPM",
   "author": {
     "name": "Alex Van Camp",
@@ -51,7 +51,7 @@
     "@types/cheerio": "^0.22.7",
     "@types/express": "^4.11.1",
     "@types/mkdirp": "^0.5.2",
-    "@types/node": "^10.1.0",
+    "@types/node": "^10.1.1",
     "@types/ora": "^1.3.4",
     "@types/p-each-series": "^1.0.0",
     "@types/pixelmatch": "^4.0.0",
@@ -81,5 +81,5 @@
     "static": "tslint -c tslint.json 'src/**/*.ts'",
     "test": "npm run static"
   },
-  "version": "0.0.1"
+  "version": "0.1.0"
 }
