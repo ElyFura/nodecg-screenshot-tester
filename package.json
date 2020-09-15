@@ -1,27 +1,34 @@
 {
-  "_from": "nodecg-screenshot-tester@3.0.0",
-  "_id": "nodecg-screenshot-tester@3.0.0",
+  "_from": "nodecg-screenshot-tester@4.0.0",
+  "_id": "nodecg-screenshot-tester@4.0.0",
   "_inBundle": false,
-  "_integrity": "sha512-ibBiR9cRg6K3nn6RRTY9h+NOmlcAI+obfdU54Q4Eh2lysZKX/zuzW4XhKn1MRR6wYAJbNTDM7zb4Yp5tmBpMiw==",
+  "_integrity": "sha512-Bq9fnHbI+RnXZ34Iut6wUqo6FLNJ27DVi5IOtYHcmhBnStBqfOiR5BLdTKcusUUT2RxtgzzcO6XZUNfVgWpPBw==",
   "_location": "/nodecg-screenshot-tester",
-  "_phantomChildren": {},
+  "_phantomChildren": {
+    "async-limiter": "1.0.1",
+    "extract-zip": "1.7.0",
+    "https-proxy-agent": "2.2.4",
+    "progress": "2.0.3",
+    "proxy-from-env": "1.1.0",
+    "rimraf": "2.7.1"
+  },
   "_requested": {
     "type": "version",
     "registry": true,
-    "raw": "nodecg-screenshot-tester@3.0.0",
+    "raw": "nodecg-screenshot-tester@4.0.0",
     "name": "nodecg-screenshot-tester",
     "escapedName": "nodecg-screenshot-tester",
-    "rawSpec": "3.0.0",
+    "rawSpec": "4.0.0",
     "saveSpec": null,
-    "fetchSpec": "3.0.0"
+    "fetchSpec": "4.0.0"
   },
   "_requiredBy": [
     "#USER",
     "/"
   ],
-  "_resolved": "https://registry.npmjs.org/nodecg-screenshot-tester/-/nodecg-screenshot-tester-3.0.0.tgz",
-  "_shasum": "e4f42bf12ae1c8942c1cb0faedab6113d9cc8cb1",
-  "_spec": "nodecg-screenshot-tester@3.0.0",
+  "_resolved": "https://registry.npmjs.org/nodecg-screenshot-tester/-/nodecg-screenshot-tester-4.0.0.tgz",
+  "_shasum": "7f59400bd893672c5cb394bfab95ca489033358e",
+  "_spec": "nodecg-screenshot-tester@4.0.0",
   "_where": "J:\\Node\\NPM",
   "author": {
     "name": "Alex Van Camp",
@@ -44,7 +51,7 @@
     "p-each-series": "^1.0.0",
     "pixelmatch": "^4.0.2",
     "pngjs": "^3.3.3",
-    "puppeteer": "~1.1.1",
+    "puppeteer": "^1.15.0",
     "tmp": "0.0.33",
     "tslib": "^1.9.1",
     "yargs": "^11.0.0"
@@ -63,7 +70,7 @@
     "@types/puppeteer": "^1.3.2",
     "@types/tmp": "0.0.33",
     "@types/yargs": "^11.0.0",
-    "ava": "^1.2.0",
+    "ava": "^1.4.1",
     "trash-cli": "^1.4.0",
     "ts-node": "^6.0.3",
     "tslint": "^5.10.0",
@@ -91,5 +98,5 @@
     "test": "npm run static"
   },
   "types": "dist/index.d.ts",
-  "version": "3.0.0"
+  "version": "4.0.0"
 }
