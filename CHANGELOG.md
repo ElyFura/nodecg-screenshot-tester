@@ -2,6 +2,31 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="6.0.0"></a>
+# [6.0.0](https://github.com/nodecg/nodecg-screenshot-tester/compare/v5.1.0...v6.0.0) (2020-01-28)
+
+
+### Bug Fixes
+
+* **package:** mock-nodecg is a prodDep ([9518e3c](https://github.com/nodecg/nodecg-screenshot-tester/commit/9518e3c))
+
+
+### BREAKING CHANGES
+
+* **package:** the last release should have been a breaking change, because it updates mock-nodecg in a way which substantially changes its behavior. Refer to the mock-nodecg changelog for details.
+
+
+
+<a name="5.1.0"></a>
+# [5.1.0](https://github.com/nodecg/nodecg-screenshot-tester/compare/v5.0.2...v5.1.0) (2020-01-28)
+
+
+### Features
+
+* **package:** update mock-nodecg ([d8e2667](https://github.com/nodecg/nodecg-screenshot-tester/commit/d8e2667))
+
+
+
 <a name="5.0.2"></a>
 ## [5.0.2](https://github.com/nodecg/nodecg-screenshot-tester/compare/v5.0.1...v5.0.2) (2019-05-14)
 
