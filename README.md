@@ -1,4 +1,4 @@
-# nodecg-screenshot-tester [![Build Status](https://travis-ci.com/nodecg/nodecg-screenshot-tester.svg?branch=master)](https://travis-ci.com/nodecg/nodecg-screenshot-tester)
+# nodecg-screenshot-tester [![npm version](https://img.shields.io/npm/v/nodecg-screenshot-tester.svg)](https://npm.im/nodecg-screenshot-tester) [![license](https://img.shields.io/npm/l/nodecg-screenshot-tester.svg)](https://npm.im/nodecg-screenshot-tester) [![Build Status](https://travis-ci.com/nodecg/nodecg-screenshot-tester.svg?branch=master)](https://travis-ci.com/nodecg/nodecg-screenshot-tester)
 
 > Automated visual regression testing of NodeCG graphics.
 
@@ -21,6 +21,7 @@ Yes, [`sgdq18-layouts`](https://github.com/GamesDoneQuick/sgdq18-layouts/tree/ma
 * [How do I populate Replicants for testing?](#populating-replicants)
 * [What if my graphic relies on HTTP routes not provided by `nodecg-screenshot-tester`?](#custom-routes)
 * [Can I run arbitrary code as part of my test?](#arbitrary-code)
+* [How do I run only a subset of my test cases?](#filter-cases)
 * [Are there other things I can do in my test cases?](#other)
 
 ## <a name="bundle-usage"></a> How do I use it in my bundle?
@@ -92,7 +93,7 @@ If your element's entrance method returns a Promise, `nodecg-screenshot-tester` 
 
 Likewise, if your element's entrance method returns a [GreenSock](https://greensock.com/gsap) tween or timeline, `nodecg-screenshot-tester` will wait for that animation to complete before taking the screenshot.
 
-Example: 
+##### Example: 
 ```js
 // nodecg/bundles/your-bundle/test/helpers/screenshot-costs.js
 module.exports = {
@@ -110,7 +111,7 @@ Yes! Just add an `additionalDelay` key to your test case.
 
 It might feel like this is a hack, but you'll probably find yourself needing to add at least a few hundred milliseconds of additional delay to _most_ of your tests. Graphics are hard.
 
-Example:
+##### Example:
 ```js
 // nodecg/bundles/your-bundle/test/helpers/screenshot-costs.js
 module.exports = {
@@ -126,11 +127,11 @@ module.exports = {
 ```
 
 ## <a name="populating-replicants"></a> How do I populate Replicants for testing?
-Absolutely. If your test case specifies a `replicantPrefills` object, it will populate those Replicants with the specified values before running your entrance method (if defined) and taking the screenshot.
+If your test case specifies a `replicantPrefills` object, it will populate those Replicants with the specified values before running your entrance method (if defined) and taking the screenshot.
 
 You can even put your Replicant values in a file on disk and have `nodecg-screenshot-tester` load them for you.
 
-Example:
+##### Example:
 ```js
 // nodecg/bundles/your-bundle/test/helpers/screenshot-costs.js
 module.exports = {
@@ -150,9 +151,9 @@ module.exports = {
 ```
 
 ## <a name="custom-routes"></a> What if my graphic relies on HTTP routes not provided by `nodecg-screenshot-tester`?
-You can provide a `CUSTOM_ROUTES` key in your `screenshot-consts.js` export:
+You can provide a `CUSTOM_ROUTES` key in your `screenshot-consts.js` export. Routes are handled by [`express`](https://expressjs.com/), so refer to its docs for more details on how to write a route.
 
-Example:
+##### Example:
 ```js
 // nodecg/bundles/your-bundle/test/helpers/screenshot-costs.js
 module.exports = {
@@ -206,7 +207,7 @@ Yes! You can provide a `before` method in your test case, which will be run befo
 
 Your `before` method can return a Promise, which also means it can be an `async` method!
 
-Example:
+##### Example:
 ```js
 // nodecg/bundles/your-bundle/test/helpers/screenshot-costs.js
 module.exports = {
@@ -215,7 +216,6 @@ module.exports = {
 			before(page, element) {
 				console.log('Just some simple synchronous code.');
 				console.log('You can put anything in here that you need to!');
-				console.log('This code runs in the browser context, so you have full access to the DOM.');
 			}
 		}, {
 			route: 'bundles/your-bundle/graphics/async-before-example.html',
@@ -227,6 +227,16 @@ module.exports = {
 			}
 		}]
 	}
+```
+
+## <a name="filter-cases"></a> How do I run only a subset of my test cases?
+The `--filter` option is what you're looking for. The value you enter will be interpreted as a RegExp.
+
+##### Example:
+```bash
+npm run generate-fixture-screenshots -- --filter=example
+npm test -- -- --filter=example
+ava test -- --filter=example
 ```
 
 ## <a name="other"></a> Are there other things I can do in my test cases?

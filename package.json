@@ -1,27 +1,27 @@
 {
-  "_from": "nodecg-screenshot-tester@2.0.0",
-  "_id": "nodecg-screenshot-tester@2.0.0",
+  "_from": "nodecg-screenshot-tester@2.1.0",
+  "_id": "nodecg-screenshot-tester@2.1.0",
   "_inBundle": false,
-  "_integrity": "sha512-Ag5YUntqjjlfvdc1pigcj18qV7hKou6bj0Bx8vsx4dxyfDt4QiNAKMChuDw2KTz3jr7NilkEsb4byTQUHtCkmQ==",
+  "_integrity": "sha512-iBqi3ZaHTxyPCUkO1okuQZLlRPZfPG036hNqNAPiTSz0dLZ4QNmzTU42CsyX/g265E0PkMTksZSSLg4yYDboKw==",
   "_location": "/nodecg-screenshot-tester",
   "_phantomChildren": {},
   "_requested": {
     "type": "version",
     "registry": true,
-    "raw": "nodecg-screenshot-tester@2.0.0",
+    "raw": "nodecg-screenshot-tester@2.1.0",
     "name": "nodecg-screenshot-tester",
     "escapedName": "nodecg-screenshot-tester",
-    "rawSpec": "2.0.0",
+    "rawSpec": "2.1.0",
     "saveSpec": null,
-    "fetchSpec": "2.0.0"
+    "fetchSpec": "2.1.0"
   },
   "_requiredBy": [
     "#USER",
     "/"
   ],
-  "_resolved": "https://registry.npmjs.org/nodecg-screenshot-tester/-/nodecg-screenshot-tester-2.0.0.tgz",
-  "_shasum": "14bdf234826c3d1d1fdcba8039ddf194504e8170",
-  "_spec": "nodecg-screenshot-tester@2.0.0",
+  "_resolved": "https://registry.npmjs.org/nodecg-screenshot-tester/-/nodecg-screenshot-tester-2.1.0.tgz",
+  "_shasum": "c56eb9140f7df2e65e4db94709cfa09b7e912329",
+  "_spec": "nodecg-screenshot-tester@2.1.0",
   "_where": "J:\\Node\\NPM",
   "author": {
     "name": "Alex Van Camp",
@@ -29,6 +29,9 @@
   },
   "bin": {
     "generate-fixture-screenshots": "dist/bin/generate-fixture-screenshots.js"
+  },
+  "bugs": {
+    "url": "https://github.com/nodecg/nodecg-screenshot-tester/issues"
   },
   "bundleDependencies": false,
   "dependencies": {
@@ -66,11 +69,16 @@
     "tslint-xo": "^0.7.2",
     "typescript": "^2.8.3"
   },
+  "homepage": "https://github.com/nodecg/nodecg-screenshot-tester#readme",
   "license": "MIT",
   "main": "dist/index.js",
   "name": "nodecg-screenshot-tester",
   "peerDependencies": {
     "ava": "^1.0.0-beta.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nodecg/nodecg-screenshot-tester.git"
   },
   "scripts": {
     "build": "trash dist && tsc -p tsconfig.json",
@@ -81,5 +89,5 @@
     "static": "tslint -c tslint.json 'src/**/*.ts'",
     "test": "npm run static"
   },
-  "version": "2.0.0"
+  "version": "2.1.0"
 }
