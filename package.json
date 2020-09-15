@@ -1,8 +1,8 @@
 {
-  "_from": "nodecg-screenshot-tester@7.0.0",
-  "_id": "nodecg-screenshot-tester@7.0.0",
+  "_from": "nodecg-screenshot-tester@8.0.0",
+  "_id": "nodecg-screenshot-tester@8.0.0",
   "_inBundle": false,
-  "_integrity": "sha512-hP1gAC1kgdcyzBk43CsLH+0kO4AsDouqaALSoT58xGpZc7D0VRdQvMoT4szKQQwuJK4MJYRcs8ThgbpZdiSvlQ==",
+  "_integrity": "sha512-N5tUtSUV2L2u5LMY9ZSxhvIGLM0SSNPotsHNjfxTUErr6tUx0SJnqgX3E5NyoIJfZtc+C68H3pYdH/DkSDTDrw==",
   "_location": "/nodecg-screenshot-tester",
   "_phantomChildren": {
     "async-limiter": "1.0.1",
@@ -16,27 +16,27 @@
   "_requested": {
     "type": "version",
     "registry": true,
-    "raw": "nodecg-screenshot-tester@7.0.0",
+    "raw": "nodecg-screenshot-tester@8.0.0",
     "name": "nodecg-screenshot-tester",
     "escapedName": "nodecg-screenshot-tester",
-    "rawSpec": "7.0.0",
+    "rawSpec": "8.0.0",
     "saveSpec": null,
-    "fetchSpec": "7.0.0"
+    "fetchSpec": "8.0.0"
   },
   "_requiredBy": [
     "#USER",
     "/"
   ],
-  "_resolved": "https://registry.npmjs.org/nodecg-screenshot-tester/-/nodecg-screenshot-tester-7.0.0.tgz",
-  "_shasum": "3a2b02e38535419af918ab5eed6b394473e75d5d",
-  "_spec": "nodecg-screenshot-tester@7.0.0",
+  "_resolved": "https://registry.npmjs.org/nodecg-screenshot-tester/-/nodecg-screenshot-tester-8.0.0.tgz",
+  "_shasum": "087dd81e0ccab5da9a8ba3d7a761af0368558a1d",
+  "_spec": "nodecg-screenshot-tester@8.0.0",
   "_where": "J:\\Node\\NPM",
   "author": {
     "name": "Alex Van Camp",
     "email": "email@alexvan.camp"
   },
   "bin": {
-    "generate-fixture-screenshots": "dist/bin/generate-fixture-screenshots.js"
+    "nodecg-screenshot-tester": "dist/bin/main.js"
   },
   "bugs": {
     "url": "https://github.com/nodecg/nodecg-screenshot-tester/issues"
@@ -93,6 +93,9 @@
     "ts-node": "^8.6.2",
     "typescript": "^3.7.5"
   },
+  "engines": {
+    "node": ">=10"
+  },
   "files": [
     "dist",
     "types/augment-window.d.ts"
@@ -105,7 +108,6 @@
     }
   },
   "license": "MIT",
-  "main": "dist/index.js",
   "name": "nodecg-screenshot-tester",
   "peerDependencies": {
     "ava": "^1.2.0"
@@ -125,5 +127,5 @@
     "test": "npm run static"
   },
   "types": "dist/index.d.ts",
-  "version": "7.0.0"
+  "version": "8.0.0"
 }
