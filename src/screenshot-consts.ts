@@ -1,9 +1,10 @@
-'use strict';
+/* eslint-disable @typescript-eslint/no-var-requires */
 
 // Native
 import * as fs from 'fs';
 import * as path from 'path';
 import * as puppeteer from 'puppeteer';
+import { Handler } from 'express';
 
 let BUNDLE_ROOT;
 try {
@@ -12,55 +13,59 @@ try {
 	BUNDLE_ROOT = findBundleRoot(process.cwd());
 }
 
-/* tslint:disable:no-var-requires */
-const constsFromBundle = require(path.join(BUNDLE_ROOT, 'test/helpers/screenshot-consts'));
-const bundlePackageJson = require(path.join(BUNDLE_ROOT, 'package.json'));
-/* tslint:enable:no-var-requires */
+const constsFromBundle = require(global.testDefPath);
+const bundleManifest = require(path.join(BUNDLE_ROOT, 'package.json'));
 
 export interface TestCase {
 	route: string;
 	nameAppendix?: string;
 	selector?: string;
 	additionalDelay?: number;
-	entranceMethodName?: string;
-	entranceMethodArgs?: any[];
-	replicantPrefills?: {[key: string]: any};
-	before?: Function;
+	replicantPrefills?: { [key: string]: any };
+	before?: (page: puppeteer.Page, element?: puppeteer.ElementHandle) => any;
+	after?: (page: puppeteer.Page, element?: puppeteer.ElementHandle) => any;
+	metadata?: { [key: string]: any };
+}
+
+export interface CustomRoute {
+	method: 'all' | 'get' | 'post' | 'put' | 'delete' | 'patch' | 'options' | 'head';
+	route: string;
+	handler: Handler;
 }
 
 export interface ConstsInterface {
-	WIDTH: number;
-	HEIGHT: number;
+	DEFAULT_WIDTH: number;
+	DEFAULT_HEIGHT: number;
 	PORT: number;
 	BUNDLE_NAME: string;
 	BUNDLE_ROOT: string;
-	BUNDLE_CONFIG: {[keys: string]: any};
+	BUNDLE_MANIFEST: any;
+	BUNDLE_CONFIG: { [keys: string]: any };
 	FIXTURE_SCREENSHOTS_DIR: string;
 	PUPPETEER_LAUNCH_OPTS: puppeteer.LaunchOptions;
 	TEST_CASES: TestCase[];
+	CUSTOM_ROUTES: CustomRoute[];
 }
 
 const baseConsts = {
-	WIDTH: 1920,
-	HEIGHT: 1080,
+	DEFAULT_WIDTH: 1920,
+	DEFAULT_HEIGHT: 1080,
 	PORT: 4000,
-	BUNDLE_NAME: bundlePackageJson.name,
+	BUNDLE_NAME: bundleManifest.name,
 	BUNDLE_ROOT,
+	BUNDLE_MANIFEST: bundleManifest,
 	BUNDLE_CONFIG: {},
 	FIXTURE_SCREENSHOTS_DIR: path.join(BUNDLE_ROOT, 'test/fixtures/screenshots'),
 	PUPPETEER_LAUNCH_OPTS: {
 		headless: true,
-		args: [
-			'--disable-gpu',
-			'--autoplay-policy=no-user-gesture-required'
-		]
-	}
+		args: ['--disable-gpu', '--autoplay-policy=no-user-gesture-required'],
+	},
 };
 
-export const CONSTS = {
+export const CONSTS: ConstsInterface = {
 	...baseConsts,
-	...constsFromBundle
-} as ConstsInterface;
+	...constsFromBundle,
+};
 
 function findBundleRoot(dir: string): string {
 	const packageJsonPath = path.join(dir, 'package.json');
