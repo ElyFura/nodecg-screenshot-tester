@@ -1,27 +1,27 @@
 {
-  "_from": "nodecg-screenshot-tester@2.1.2",
-  "_id": "nodecg-screenshot-tester@2.1.2",
+  "_from": "nodecg-screenshot-tester@2.2.0",
+  "_id": "nodecg-screenshot-tester@2.2.0",
   "_inBundle": false,
-  "_integrity": "sha512-tXlFyB6z70rM7/KH0NSQp8gGJc3dc7QdE64xFIFnrvLhqU/3X4iCMRBKuLXNq3hyZWp3h5hvhy765ShfIJ34Rw==",
+  "_integrity": "sha512-Zk0CJvnnMb3m95a0AgSdDwMydk1S0NhT1nPqS5ArDsvWGzZ37gSiRlHIoC3FgzhaZqKcb6gMx6kzLaJxobZRdw==",
   "_location": "/nodecg-screenshot-tester",
   "_phantomChildren": {},
   "_requested": {
     "type": "version",
     "registry": true,
-    "raw": "nodecg-screenshot-tester@2.1.2",
+    "raw": "nodecg-screenshot-tester@2.2.0",
     "name": "nodecg-screenshot-tester",
     "escapedName": "nodecg-screenshot-tester",
-    "rawSpec": "2.1.2",
+    "rawSpec": "2.2.0",
     "saveSpec": null,
-    "fetchSpec": "2.1.2"
+    "fetchSpec": "2.2.0"
   },
   "_requiredBy": [
     "#USER",
     "/"
   ],
-  "_resolved": "https://registry.npmjs.org/nodecg-screenshot-tester/-/nodecg-screenshot-tester-2.1.2.tgz",
-  "_shasum": "76c4652c4fc20545e1b9e4afb6683fffb1e1b73b",
-  "_spec": "nodecg-screenshot-tester@2.1.2",
+  "_resolved": "https://registry.npmjs.org/nodecg-screenshot-tester/-/nodecg-screenshot-tester-2.2.0.tgz",
+  "_shasum": "3c412bbc4c6b3d5d996b30b31a19557cafb493cb",
+  "_spec": "nodecg-screenshot-tester@2.2.0",
   "_where": "J:\\Node\\NPM",
   "author": {
     "name": "Alex Van Camp",
@@ -36,7 +36,8 @@
   "bundleDependencies": false,
   "dependencies": {
     "cheerio": "^1.0.0-rc.2",
-    "express": "^4.16.3",
+    "express": "^4.16.4",
+    "express-transform-bare-module-specifiers": "^1.0.2",
     "mkdirp": "^0.5.1",
     "mock-nodecg": "^1.7.0",
     "ora": "^2.1.0",
@@ -52,7 +53,7 @@
   "description": "Automated visual regression testing of NodeCG graphics.",
   "devDependencies": {
     "@types/cheerio": "^0.22.7",
-    "@types/express": "^4.11.1",
+    "@types/express": "^4.16.0",
     "@types/mkdirp": "^0.5.2",
     "@types/node": "^10.1.1",
     "@types/ora": "^1.3.4",
@@ -89,5 +90,5 @@
     "static": "tslint -c tslint.json 'src/**/*.ts'",
     "test": "npm run static"
   },
-  "version": "2.1.2"
+  "version": "2.2.0"
 }
