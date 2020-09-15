@@ -45,14 +45,14 @@ To be completely blunt, the API for this is quirky and probably could be improve
     ```json
     {
     	"scripts": {
-    		"test-screenshots": "nodecg-screenshot-tester test/screenshots.js",
+    		"test-screenshots": "nodecg-screenshot-tester --definitions test/screenshots.js",
     		"update-screenshots": "npm run test-screenshots -- --update",
     		"debug-screenshots": "npm run test-screenshots -- --debug"
     	}
     }
     ```
 
-3. Create a `screenshots.js` file, which is where your test cases will be defined:
+3. Create a `test/screenshots.js` file, which is where your test cases will be defined:
 
     ```js
     // nodecg/bundles/your-bundle/test/screenshots.js
@@ -96,6 +96,8 @@ You can provide a `selector`, `entranceMethodName` and optional `entranceMethodA
 If your element's entrance method returns a Promise, `nodecg-screenshot-tester` will wait for that Promise to resolve before taking the screesnhot.
 
 > 🧦 Do you use [GSAP](https://greensock.com/) to write your animations? [As of version 3](https://greensock.com/3-migration/), GSAP timelines and tweens are all `thenable`, meaning that `nodecg-screenshot-tester` can await them the same way it would any normal Promise!
+
+> ❓ Does this method of invoking animations not work with your graphics? Try using the [`before` and/or `after`](#arbitrary-code) hooks to run arbitrary code instead. You may find yourself needing to take this route if you use React, Vue, or other similar frontend frameworks.
 
 ##### Example:
 
